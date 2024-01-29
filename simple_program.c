@@ -8,8 +8,12 @@ int main(int argc, char **argv) {
 
     char *echo_msg = NULL;
     char *name = NULL;
+
     // h: Help
     // e [msg]: Echo message
+    // n [name]: Print hi [name]!
+    // p: Print Pong!
+    
     while ((c = getopt(argc, argv, "he:n:p")) != -1) {
         has_option = 1;
 
