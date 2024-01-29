@@ -19,21 +19,19 @@ int main(int argc, char **argv) {
                 puts("\nOptions:");
                 puts("\t-h: Print help message");
                 puts("\t-e [msg]: Echo message");
-		        puts("\t-n [name]: Print Hi [name]!");
                 puts("\t-p: Print Pong!");
                 return 0;
             
             case 'e':
                 echo_msg = optarg;
                 break;
-
             case 'n':
                 name = optarg;
                 break;
+            case 'p':
+                    printf("Pong!\n");
+                    break;
 
-	        case 'p':
-                printf("Pong!\n");
-                break;
         }
     }
 
@@ -46,5 +44,6 @@ int main(int argc, char **argv) {
         puts(echo_msg);
 
     if (name != NULL)
-        printf("hi %s!", name);
+        printf("Hi %s!", name);
+
 }
