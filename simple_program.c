@@ -13,8 +13,8 @@ int main(int argc, char **argv) {
     // e [msg]: Echo message
     // n [name]: Print hi [name]!
     // p: Print Pong!
-    
-    while ((c = getopt(argc, argv, "he:n:p")) != -1) {
+    // j: Print handsome jerry 
+    while ((c = getopt(argc, argv, "he:n:pj")) != -1) {
         has_option = 1;
 
         switch (c) {
@@ -35,7 +35,9 @@ int main(int argc, char **argv) {
             case 'p':
                     printf("Pong!\n");
                     break;
-
+            case 'j':
+		printf("handsome jerry!");
+		return 0;
         }
     }
 
