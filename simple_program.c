@@ -7,9 +7,11 @@ int main(int argc, char **argv) {
     int has_option = 0;
 
     char *echo_msg = NULL;
+    char *name = NULL;
+
     // h: Help
     // e [msg]: Echo message
-    while ((c = getopt(argc, argv, "he:")) != -1) {
+    while ((c = getopt(argc, argv, "he:n:")) != -1) {
         has_option = 1;
 
         switch (c) {
@@ -23,6 +25,10 @@ int main(int argc, char **argv) {
             case 'e':
                 echo_msg = optarg;
                 break;
+
+            case 'n':
+                name = optarg;
+                break;
         }
     }
 
@@ -33,4 +39,8 @@ int main(int argc, char **argv) {
 
     if (echo_msg != NULL)
         puts(echo_msg);
+
+    if (name != NULL)
+        printf("hi %s!", name);
+    
 }
