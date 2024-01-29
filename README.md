@@ -1,1 +1,2 @@
-#A simple program asdf
+# A simple program
+This is a simple program
