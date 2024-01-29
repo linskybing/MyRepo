@@ -8,13 +8,9 @@ int main(int argc, char **argv) {
 
     char *echo_msg = NULL;
     char *name = NULL;
-<<<<<<< HEAD
-
-=======
->>>>>>> d577d74 (feat: ping pong)
     // h: Help
     // e [msg]: Echo message
-    while ((c = getopt(argc, argv, "he:n:")) != -1) {
+    while ((c = getopt(argc, argv, "he:n:p")) != -1) {
         has_option = 1;
 
         switch (c) {
@@ -30,21 +26,14 @@ int main(int argc, char **argv) {
             case 'e':
                 echo_msg = optarg;
                 break;
-<<<<<<< HEAD
 
             case 'n':
                 name = optarg;
                 break;
-=======
-	
-            case 'n':
-                name = optarg;
-		        break;
-            case 'p':
+
+	        case 'p':
                 printf("Pong!\n");
                 break;
-
->>>>>>> d577d74 (feat: ping pong)
         }
     }
 
@@ -57,11 +46,5 @@ int main(int argc, char **argv) {
         puts(echo_msg);
 
     if (name != NULL)
-<<<<<<< HEAD
         printf("hi %s!", name);
-    
-=======
-        printf("Hi %s!", name);
-
->>>>>>> d577d74 (feat: ping pong)
 }
