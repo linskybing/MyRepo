@@ -7,7 +7,6 @@ int main(int argc, char **argv) {
     int has_option = 0;
 
     char *echo_msg = NULL;
-
     // h: Help
     // e [msg]: Echo message
     while ((c = getopt(argc, argv, "he:")) != -1) {
